@@ -11,12 +11,11 @@
   position: fixed;
   width: 100%;
   background-color: white;
-  display: block;
+  display: flex;
   text-align: center;
+  flex-direction: column;
   padding-bottom: 13px;
   padding-top: 10px;
-}
-
 }
 
 .menu {
@@ -25,14 +24,15 @@
   margin-top: 10px;
 }
 
-.item-1, .item-2 {
+.item-1,
+.item-2 {
   font-family: var(--font-family);
   color: #4a4a4a;
   font-size: 16px;
 }
 
 .item-1 {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .claim {
@@ -48,22 +48,23 @@
 }
 
 @media all and (min-width: 768px) {
-.top {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
+  .top {
+    flex-direction: row;
+    align-content: center;
     padding: 20px 30px;
-}
+    justify-content: space-between;
+  }
+  .menu {
+    justify-content: center;
+    margin-right: 90px;
+    margin-top: 25px;
+  }
+  .item-1,
+  .item-2 {
+    text-align: center;
+  }
 
-.menu {
-    align-items: center;
-}
-
-.claim {
+  .claim {
     font-size: 40px;
-}
-
-
-
+  }
 }
